@@ -10,14 +10,13 @@ pool:
   
   name: Default
 steps:
-- task: Gradle@2
+- task: Maven@4
   inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: 'default'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-    testResultsFiles: '$(system.defaultWorkingDirectory)/IdentityService/gradlew'
-    tasks: 'build'
+    testResultsFiles: 'IdentityService/pom.xml'
+    goals: 'package'
