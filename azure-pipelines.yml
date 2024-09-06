@@ -18,5 +18,5 @@ steps:
     jdkVersionOption: 'default'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-    testResultsFiles: 'IdentityService/pom.xml'
+    testResultsFiles: '$(system.defaultWorkingDirectory)/IdentityService/pom.xml'
     goals: 'package'
